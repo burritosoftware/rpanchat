@@ -71,7 +71,7 @@ class RPANChat:
             raise ConnectionError
         stream_json = strapi_request.json()
         live_comments_websocket = stream_json['data']['post']['liveCommentsWebsocket']
-        self._websocket.connect(live_comments_websocket)
+        self._websocket.connect(live_comments_websocket, header=self._header)
 
     def disconnect(self) -> None:
         self._websocket.close()
