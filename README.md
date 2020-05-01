@@ -15,3 +15,8 @@ chat.connect(stream_id)
 for comment in chat:
     print(comment.author + ': ' + comment.body)
 ```
+
+###Installation:
+```
+pip install https://github.com/dominikrowinski/rpanchat/tarball/master
+```
